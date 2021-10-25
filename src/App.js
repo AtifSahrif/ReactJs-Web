@@ -1,25 +1,69 @@
-import logo from './logo.svg';
 import './App.css';
-
+import react from 'react';
+import HomePage from './Components/HomePage';
+import About from './Components/About';
+import CourseListPage from './Components/CourseListPage';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>Initial App Structure</p>
+      <HomePage />
+      <About />
+
+      <CourseListPage />
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class App extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       showCounter: false
+//     }
+//   }
+
+//   SetShowCounter = () => {
+//     this.setState({ showCounter: true });
+//   }
+
+//   render() {
+//     return (
+//       <div className="App">
+//         <p>Counter</p>
+//         <button onClick={this.SetShowCounter}>Show Counter</button>
+//         {this.state.showCounter && <Counter SetShowCounter={this.SetShowCounter} />} {/* */}
+//       </div>
+//     );
+//   }
+// }
+
+// function App() {
+//   const [showCounter, setShowCounter] = useState(false);
+//   const hideCounter = () => {
+//     setShowCounter(false);
+//   }
+
+//   return (
+//     <div className="App">
+//       <p>Counter</p>
+//       <button onClick={() => setShowCounter(true)}>Show Counter</button>
+//       {showCounter && <Counter hideCounter={hideCounter} />}   {/*if statement */} {/* {showCounter ? <Counter/>:"helo"} if else*/}
+
+//     </div>
+//   );
+// }
 
 export default App;
